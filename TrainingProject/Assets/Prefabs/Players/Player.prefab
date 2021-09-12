@@ -576,12 +576,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4109023902977120085}
-  m_LocalRotation: {x: -0.7071069, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.5, y: 7.25, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 6.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8465596400914127831}
-  m_RootOrder: 0
+  m_Father: {fileID: 1784549826793946923}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4583118856789182797
 GameObject:
@@ -698,6 +698,36 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6120201752589882437}
   m_Enabled: 1
+--- !u!1 &6722447116576605794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7533505713093974191}
+  m_Layer: 0
+  m_Name: MineSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7533505713093974191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6722447116576605794}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.00000047683716, y: 3.5, z: -4.7500014}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1784549826793946923}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &6859755508105670294
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,8 +758,7 @@ Transform:
   m_LocalRotation: {x: 0.7071069, y: -0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0.5, y: 3, z: -0.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2444039976023847596}
+  m_Children: []
   m_Father: {fileID: 6476293934897391605}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -1507,6 +1536,7 @@ GameObject:
   - component: {fileID: 1784549826793946923}
   - component: {fileID: 1116900848}
   - component: {fileID: 1116900847}
+  - component: {fileID: 5750048751760776753}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1527,6 +1557,8 @@ Transform:
   m_Children:
   - {fileID: 6476591325691868428}
   - {fileID: 6476293934897391605}
+  - {fileID: 2444039976023847596}
+  - {fileID: 7533505713093974191}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1561,3 +1593,22 @@ MonoBehaviour:
   MoveSpeed: 900
   AngularSpeed: 3
   Direction: {x: 0, y: 0, z: 0}
+--- !u!114 &5750048751760776753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8687776272603100952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 545ddc2cd39d9a04a86588a3e6490628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnMine: 32
+  Shoot: 271
+  Parent: {fileID: 0}
+  MineSpawner: {fileID: 7533505713093974191}
+  bulletSpawner: {fileID: 2444039976023847596}
+  Mine: {fileID: 1152304999288529578, guid: 4015c230d696ea04ea846725330153af, type: 3}
+  Distance: 3
